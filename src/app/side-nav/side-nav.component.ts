@@ -21,6 +21,9 @@ export class SideNavComponent implements OnInit {
   loadform(){
     this.router.navigate(['feedback']);
   }
+  loadDashboard(){
+    this.router.navigate(['home']);
+  }
   ngOnInit() {
   }
 

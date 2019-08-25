@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { FeedbackFormComponent } from './feedback-form/feedback-form.component';
+import { GoogleChartsModule } from 'angular-google-charts';
 
 const routes: Routes = [
   {path:'home',component:HomeComponent},
@@ -29,7 +30,8 @@ const routes: Routes = [
     LoginComponent,
     HomeComponent,
     SideNavComponent,
-    FeedbackFormComponent
+    FeedbackFormComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,8 @@ const routes: Routes = [
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    GoogleChartsModule.forRoot()
   ],
   providers: [DataServiceService],
   bootstrap: [AppComponent]

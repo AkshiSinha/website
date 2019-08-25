@@ -1,1 +1,29 @@
-<router-outlet> <h1><span>Welcome to home page, {{txt2}}</span></h1></router-outlet>
+<html>
+<body>
+        <div class="one" style="margin-left: 500px">
+<router-outlet><h1>hello {{txt2}}</h1></router-outlet>
+
+<!-- <button (click)=salesChart()></button> -->
+<google-chart #chart class="chart"
+   [title]="title"
+   [type]="type"
+   [data]="data"
+   [columnNames]="columnNames"
+   [options]="options"
+   [width]="width"
+   [height]="height">
+</google-chart>
+</div>
+</body>
+</html>
+
+<!-- <script src="https://www.gstatic.com/charts/loader.js"></script> -->
+<!-- <select onchange="valueChanged(this.value)" id="menu">
+  <option selected value="1">livejournal</option>
+  <option value="2">librarybooks</option>
+  <option value="3">sunspots</option>
+</select>
+
+<div id="chart_div"></div> -->
+
+
