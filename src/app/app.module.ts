@@ -9,10 +9,13 @@ import { Routes, RouterModule } from '@angular/router';
 import {DataServiceService} from './data-service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
+import { SideNavComponent } from './side-nav/side-nav.component';
+import { FeedbackFormComponent } from './feedback-form/feedback-form.component';
 
 const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'navbar',component:AppComponent},
+  {path:'feedback',component:FeedbackFormComponent},
   {
     path: 'reactiveform',
     pathMatch: 'full',
@@ -24,7 +27,9 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    SideNavComponent,
+    FeedbackFormComponent
   ],
   imports: [
     BrowserModule,

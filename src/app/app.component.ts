@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataServiceService } from './data-service.service';
+import { observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -9,13 +10,15 @@ import { DataServiceService } from './data-service.service';
 })
 export class AppComponent {
   title = 'BasicWebsite';
-  user="";
+ public user:any;
 
   constructor(private router: Router,private user_service:DataServiceService) { 
     
     
     this.router.navigate(['./reactiveform']);
-    this.user=this.user_service.uname;
+   
+    this.user=this.user_service.currentUser;
+    // this.user_service.currentUser.subscribe(x => this.user = x);
     console.log(this.user+"hello");
     
   }

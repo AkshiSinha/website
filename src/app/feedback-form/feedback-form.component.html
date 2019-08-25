@@ -1,0 +1,38 @@
+<div class="div1 row w-100 h-100" >
+        <div class="w-25 mx-auto my-auto">
+<form [formGroup]="registrationForm" (ngSubmit)="onRegistrationFormSubmit()">
+
+        <label>First Name</label><br>
+        <input type="text" placeholder="Enter First Name Here.." formControlName="firstName" class="form-control" />
+        <div *ngIf="registrationForm.get('firstName').errors  && isSubmitted">
+                <div *ngIf="registrationForm.get('firstName').hasError('required')">
+                  <span style="color: red;">Please Enter First Name.</span>
+                </div>
+                <div *ngIf="registrationForm.get('firstName').hasError('minlength')">
+                  <span style="color: red;">First Name requied atleast 3 characters.</span>
+                </div>
+                <div *ngIf="registrationForm.get('firstName').hasError('maxlength')">
+                  <span style="color: red;">First Name requied only 30 characters.</span>
+                </div>
+        </div>
+        <br>
+        <br>
+        <label>Feedback</label><br>
+        <input type="text" placeholder="Enter Feedback Here.." formControlName="feedback" class="form-control" />
+        <div *ngIf="registrationForm.get('feedback').errors  && isSubmitted">
+                <div *ngIf="registrationForm.get('feedback').hasError('required')">
+                  <span style="color: red;">Please Enter Feedback.</span>
+                </div>
+                <div *ngIf="registrationForm.get('feedback').hasError('minlength')">
+                  <span style="color: red;">First Name requied atleast 3 characters.</span>
+                </div>
+                
+        </div>
+            <br>
+            <br>
+        <button class="btn" type="submit" class="btn btn-lg btn-info">Submit</button>
+              
+    
+    </form>
+</div>
+</div>

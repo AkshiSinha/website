@@ -64,7 +64,7 @@ export class LoginComponent  {
   
         this.postService.enroll(this.registrationForm.value)
         
-        this.router.navigate(['./navbar']);
+        this.router.navigate(['./home']);
         // .subscribe(res =>
           // {if(res){
           //   console.log(res);

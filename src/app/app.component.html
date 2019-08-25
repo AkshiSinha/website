@@ -14,12 +14,13 @@
         <li><a href="#">Home</a></li>
         <li><a href="#">Projects</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="#">{{user|uppercase}}</a></li>
+        <li><a href="#" *ngIf="user">{{user|uppercase}}</a></li>
         
       </ul>
       <!-- </div> -->
       <!-- <h1>Hello, {{user}}</h1> -->
     </div>
+    <app-side-nav></app-side-nav>
 
     <router-outlet></router-outlet>
 

@@ -1,0 +1,24 @@
+{
+  "feedback": [
+    {
+      "id": 1,
+      "firstName": "akshi",
+      "feedback": "json-server"
+    },
+    {
+      "firstName": "ahduc",
+      "feedback": "cjuyciuoi",
+      "id": 2
+    },
+    {
+      "firstName": "dhiudhoia",
+      "feedback": "kdjfo",
+      "id": 3
+    },
+    {
+      "firstName": "ugfuie",
+      "feedback": "hiudhf",
+      "id": 4
+    }
+  ]
+}
