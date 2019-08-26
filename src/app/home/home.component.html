@@ -1,21 +1,29 @@
-<html>
-<body>
-        <div class="one" style="margin-left: 500px">
-<router-outlet><h1>hello {{txt2}}</h1></router-outlet>
+<app-header></app-header>
+<app-side-nav></app-side-nav>
 
-<!-- <button (click)=salesChart()></button> -->
-<google-chart #chart class="chart"
-   [title]="title"
-   [type]="type"
-   [data]="data"
-   [columnNames]="columnNames"
-   [options]="options"
-   [width]="width"
-   [height]="height">
-</google-chart>
+<div class="one" style="margin-left: 500px">
+  <router-outlet>
+    <h1>hello {{txt2}}</h1>
+  </router-outlet>
+  <div class="dropdown">
+    <button class="dropbtn">Dropdown
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a (click)="chartone()">Graph 1</a>
+      <a (click)="charttwo()">Graph 2</a>
+    </div>
+  </div>
+
+  <!-- <button (click)=salesChart()></button> -->
+  <google-chart #chart id="chart1" style="display:none;" [title]="title" [type]="type" [data]="data"
+    [columnNames]="columnNames" [options]="options" [width]="width" [height]="height">
+  </google-chart>
+
+  <google-chart #chart id="chart2" style="display:none;" [title]="title" [type]="type" [data]="data"
+    [columnNames]="columnNames" [options]="options" [width]="width" [height]="height">
+  </google-chart>
 </div>
-</body>
-</html>
 
 <!-- <script src="https://www.gstatic.com/charts/loader.js"></script> -->
 <!-- <select onchange="valueChanged(this.value)" id="menu">
@@ -25,5 +33,3 @@
 </select>
 
 <div id="chart_div"></div> -->
-
-

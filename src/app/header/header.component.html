@@ -1,0 +1,18 @@
+<div class="navigation-bar">
+
+
+  <!-- <div id="navigation-container"> -->
+
+  <img class="logo" src="assets\image.jpg">
+
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Projects</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#" *ngIf="user">{{user|uppercase}}</a></li>
+    <li><button (click)="userLogout()">Logout</button></li>
+
+  </ul>
+  <!-- </div> -->
+  <!-- <h1>Hello, {{user}}</h1> -->
+</div>
